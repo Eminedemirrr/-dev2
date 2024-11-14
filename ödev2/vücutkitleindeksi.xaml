@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.vücutkitleindeksi"
+             BackgroundColor="#F0F0F5">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
+
+            <!-- Başlık -->
+            <Label Text="Vücut Kitle İndeksi Hesaplama" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#6200EE" />
+
+            <!-- Boy Slider ve Etiketi -->
+            <Frame Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Boy (cm):" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Slider x:Name="BoySlider" Minimum="100" Maximum="250" ValueChanged="OnValueChanged" ThumbColor="#6200EE" />
+                    <Label x:Name="BoyValueLabel" Text="100" HorizontalOptions="Center" TextColor="Gray"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Kilo Slider ve Etiketi -->
+            <Frame Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Kilo (kg):" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Slider x:Name="KiloSlider" Minimum="30" Maximum="200" ValueChanged="OnValueChanged" ThumbColor="#6200EE" />
+                    <Label x:Name="KiloValueLabel" Text="30" HorizontalOptions="Center" TextColor="Gray"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- VKİ Sonucunu Gösteren Etiket -->
+            <Frame Padding="15" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Vücut Kitle İndeksi (VKİ):" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Label x:Name="VkiLabel" FontSize="Large" FontAttributes="Bold" TextColor="#6200EE" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- VKİ Durumunu Gösteren Etiket -->
+            <Frame Padding="15" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Durum:" FontSize="Medium" HorizontalOptions="Center"/>
+                    <Label x:Name="VkiDurumuLabel" FontSize="Large" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

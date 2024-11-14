@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.MainPage"
+             Title="Ana Sayfa">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20"
+                             BackgroundColor="#EDEDED">
+
+          
+            <Frame Padding="8" HasShadow="True" BorderColor="#FF5722"
+                   BackgroundColor="White" CornerRadius="20"
+                   HorizontalOptions="Center">
+                <Image Source="emine.jpg"
+                       WidthRequest="180" HeightRequest="270"
+                       HorizontalOptions="Center" Aspect="AspectFill"/>
+            </Frame>
+
+           
+            <Label Text="Emine DEMİR" FontSize="28"
+                   HorizontalOptions="Center" TextColor="#4A4A4A"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği"
+                   FontSize="16" HorizontalOptions="Center"
+                   TextColor="#757575" FontAttributes="Italic"/>
+
+            <Frame BackgroundColor="#FFC107" Padding="10"
+                   CornerRadius="15" HorizontalOptions="Center"
+                   WidthRequest="180" HasShadow="True">
+                <Label Text="ÖDEV-2" FontSize="24"
+                       HorizontalOptions="Center" TextColor="#333333"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+        
+            <Frame BackgroundColor="White" CornerRadius="15"
+                   Padding="15" HasShadow="True" Margin="0,20,0,0">
+                <Label Text="Bu sayfada öğrencinin üniversite bilgileri ve ödev başlığı bulunmaktadır."
+                       FontSize="14" TextColor="#424242"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,67 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.Kredi_HesaplamaPage"
+             Title="Kredi Hesaplama">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+
+            <!-- Başlık -->
+            <Label Text="İhtiyaç Kredisi Hesaplama" 
+                   FontSize="Large" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="Orange" />
+
+            <!-- Kredi Tutarı Girişi -->
+            <Entry Placeholder="Kredi Tutarı (TL)" 
+                   Keyboard="Numeric" 
+                   x:Name="KrediTutariEntry"
+                   BackgroundColor="WhiteSmoke"
+                   Margin="10"
+                   TextColor="Black" />
+
+            <!-- Faiz Oranı Girişi -->
+            <Entry Placeholder="Faiz Oranı (%)" 
+                   Keyboard="Numeric" 
+                   x:Name="FaizOraniEntry"
+                   BackgroundColor="WhiteSmoke"
+            
+                   Margin="10"
+                   TextColor="Black" />
+
+            <!-- Vade Girişi -->
+            <Entry Placeholder="Vade (Ay)" 
+                   Keyboard="Numeric" 
+                   x:Name="VadeEntry"
+                   BackgroundColor="WhiteSmoke"
+                   
+                   Margin="10"
+                   TextColor="Black" />
+
+            <!-- Hesapla Butonu -->
+            <Frame BackgroundColor="Purple" CornerRadius="15" Padding="5" Margin="0,10,0,20">
+                <Button Text="Hesapla" 
+                        Clicked="OnHesaplaClicked" 
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Padding="10"/>
+            </Frame>
+
+            <!-- Hesaplama Sonuçları -->
+            <Frame BackgroundColor="LightGray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Aylık Taksit:" FontSize="Small" TextColor="Black" />
+                    <Label x:Name="AylikTaksitLabel" Text="₺0.00" FontSize="Medium" TextColor="DarkGreen" />
+
+                    <Label Text="Toplam Ödeme:" FontSize="Small" TextColor="Black" />
+                    <Label x:Name="ToplamOdemeLabel" Text="₺0.00" FontSize="Medium" TextColor="DarkGreen" />
+
+                    <Label Text="Toplam Faiz:" FontSize="Small" TextColor="Black" />
+                    <Label x:Name="ToplamFaizLabel" Text="₺0.00" FontSize="Medium" TextColor="DarkGreen" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

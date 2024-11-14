@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ödev2"
+       x:Class="ödev2.AppShell">
+
+    <ShellContent
+        Title="Ana Sayfa"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Icon="home.png"
+        Route="MainPage" />
+
+
+    <ShellContent
+     Title="Kredi Hesabı"
+    ContentTemplate="{DataTemplate local:Kredi_HesaplamaPage}"
+     Icon="calculator.png"
+     Route="KrediHesaplamaPage" />
+
+    <ShellContent
+     Title="Vücut Kitle İndeksi"
+     ContentTemplate="{DataTemplate local:vücutkitleindeksi}"
+     Icon="health.png"
+     Route="VucutKitleIndeksiPage" />
+
+
+    <ShellContent
+     Title="Renk Seçici"
+     ContentTemplate="{DataTemplate local:RenkSeciciPage}"
+     Icon="color.png"
+     Route="RenkSeciciPage" />
+
+    <ShellContent
+     Title="Yapılacaklar"
+     ContentTemplate="{DataTemplate local:YapilacaklarPage}"
+     Icon="document.png"
+     Route="YapilacaklarPage" />
+
+
+
+</Shell>

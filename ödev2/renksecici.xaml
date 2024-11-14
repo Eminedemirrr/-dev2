@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.RenkSeciciPage"
+             Title="Renk Seçimi">
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <!-- Başlık -->
+            <Label Text="Renk Seçici"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,10"/>
+
+            <!-- Renk Ayarları -->
+            <Frame Padding="20" CornerRadius="10" BackgroundColor="#EEEEEE" HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Kırmızı Ton -->
+                    <Label Text="Kırmızı Ton:" TextColor="Red"/>
+                    <Slider x:Name="RedSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                    <!-- Yeşil Ton -->
+                    <Label Text="Yeşil Ton:" TextColor="Green"/>
+                    <Slider x:Name="GreenSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                    <!-- Mavi Ton -->
+                    <Label Text="Mavi Ton:" TextColor="Blue"/>
+                    <Slider x:Name="BlueSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                    <!-- Renk Kodu ve Kopyala Butonu -->
+                    <HorizontalStackLayout Spacing="10">
+                        <Entry x:Name="ColorCodeEntry"
+                               IsReadOnly="True"
+                               Text="#000000"
+                               HorizontalOptions="FillAndExpand"/>
+                        <Button Text="📋" 
+                                Clicked="OnCopyColorCodeClicked" 
+                                WidthRequest="40"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Rastgele Renk Butonu -->
+                    <Button Text="Random" Clicked="OnRandomColorClicked" BackgroundColor="#6A0DAD" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Renk Önizlemesi -->
+            <Frame Padding="0" HasShadow="True" BorderColor="#6200EE" CornerRadius="15" 
+                   HeightRequest="200" WidthRequest="200" HorizontalOptions="Center">
+                <BoxView x:Name="ColorPreview" BackgroundColor="#000000"/>
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
